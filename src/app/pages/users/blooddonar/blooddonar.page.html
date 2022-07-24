@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Blood Donar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <h1>Become Blood Donar</h1>
+    <ion-card>
+
+      <form action="" (ngSubmit)="onSubmit()">
+        <ion-label>Name</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-label>Age</ion-label>
+        <ion-input type="password"></ion-input>
+        <ion-label>Mobile No.</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-select placeholder="Select Blood Group">
+          <ion-select-option value="A">A-</ion-select-option>
+          <ion-select-option value="B">B-</ion-select-option>
+          <ion-select-option value="AB">AB-</ion-select-option>
+          <ion-select-option value="O">O-</ion-select-option>
+        </ion-select>
+        <ion-select placeholder="Select if you are regular or not">
+          <ion-select-option value="Yes">Yes</ion-select-option>
+          <ion-select-option value="No">No</ion-select-option>
+        </ion-select>
+        <ion-select placeholder="Select your district">
+          <ion-select-option>Chamoli</ion-select-option>
+          <ion-select-option>Uttarkashi</ion-select-option>
+          <ion-select-option>Almoda</ion-select-option>
+          <ion-select-option>Bageshwar</ion-select-option>
+          <ion-select-option>Pithoragarh</ion-select-option>
+          <ion-select-option>Champawat</ion-select-option>
+          <ion-select-option>Dehradun</ion-select-option>
+          <ion-select-option>Haridwar</ion-select-option>
+        </ion-select>
+        <ion-button type="submit">Submit</ion-button>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

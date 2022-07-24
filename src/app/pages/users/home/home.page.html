@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-chip slot="end">
+      <ion-label class="username">Welcome</ion-label>
+    </ion-chip>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <h1>Search Donar</h1>
+    <div class="select">
+      <div class="select-div">
+        <p>Blood Group</p>
+        <ion-select [value]="bloodGroup" (ionChange)="bloodGroupChange($event.target.value)"
+          placeholder="Select Blood Group">
+          <ion-select-option value="all">All</ion-select-option>
+          <ion-select-option value="A-">A-</ion-select-option>
+          <ion-select-option value="B-">B-</ion-select-option>
+          <ion-select-option value="AB-">AB-</ion-select-option>
+          <ion-select-option value="O-">O-</ion-select-option>
+        </ion-select>
+      </div>
+      <div class="select-div">
+        <p>District</p>
+        <ion-select [value]="district" (ionChange)="districtChange($event.target.value)" placeholder="Select District">
+          <ion-select-option value="all">All</ion-select-option>
+          <ion-select-option value="chamoli">Chamoli</ion-select-option>
+          <ion-select-option value="uttarkashi">Uttarkashi</ion-select-option>
+          <ion-select-option value="almoda">Almoda</ion-select-option>
+          <ion-select-option value="bageshwar">Bageshwar</ion-select-option>
+          <ion-select-option value="pithoragarh">Pithoragarh</ion-select-option>
+          <ion-select-option value="champawat">Champawat</ion-select-option>
+          <ion-select-option value="dehradun">Dehradun</ion-select-option>
+          <ion-select-option value="haridwar">Haridwar</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <ion-card *ngFor="let donar of donars; let i = index">
+        <p><span>S.No</span> {{i}}</p>
+        <p><span>Donar Name:</span> {{donar.Donar_Name}}</p>
+        <p><span>Age:</span> {{donar.Age}}</p>
+        <p><span>Blood Group:</span> {{donar.Blood_Group}}</p>
+        <p><span>Regular/Casual:</span> {{donar.Regular_Casual}}</p>
+        <p><span>Mobile No:</span> {{donar.MobileNo}}</p>
+    </ion-card>
+  </div>
+</ion-content>

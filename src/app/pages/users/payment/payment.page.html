@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-card>
+      <form action="" (ngSubmit)="onSubmit()" id="form">
+        <ion-select placeholder="Select Amount">
+          <ion-select-option value="">500₹</ion-select-option>
+          <ion-select-option value="">1000₹</ion-select-option>
+          <ion-select-option value="">2000₹</ion-select-option>
+          <ion-select-option value="">5000₹</ion-select-option>
+          <ion-select-option value="">10000₹</ion-select-option>
+        </ion-select>
+        <ion-button type="submit">Pay</ion-button>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

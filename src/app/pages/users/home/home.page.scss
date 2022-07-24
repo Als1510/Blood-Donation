@@ -1,0 +1,44 @@
+ion-content{
+  margin: 0;
+  padding: 0;
+  scroll-margin: 0;
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    h1{
+      margin-left: 0.5rem;
+    }
+    .select{
+      padding-right: 0.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      .select-div{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  .box{
+    display: grid;
+    grid-gap: 0.5rem;
+    ion-card{
+      padding: 0.7rem 0.3rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      p{
+        margin: 0;
+        padding: 0.3rem 0;
+        span{
+          font-weight: 600;
+          color: #000;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
